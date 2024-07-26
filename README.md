@@ -27,7 +27,7 @@ end
 By default, the Fastfetch config file looks something like this:
 
 ```json
-    {
+{
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "modules": [
     "title",
