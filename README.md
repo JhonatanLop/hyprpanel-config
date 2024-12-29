@@ -105,6 +105,8 @@ My config.json file right now and how it looks:
 }
 ```
 
+![screenshot_2024-12-28_21-43-00](https://github.com/user-attachments/assets/b593d026-cf11-4b18-9356-ec690605a690)
+
 For the power button on top-right, i needed to add it code in the customization tool. `hyprpanel toggleWindow settings-dialog`.<br>
 paht: Configuration > Bar > Bar Layouts for Monitors<br>
 
