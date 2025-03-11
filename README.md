@@ -25,13 +25,13 @@ My config.json file right now and how it looks:
   "menus.dashboard.shortcuts.left.shortcut4.icon": "",
   "menus.dashboard.shortcuts.left.shortcut4.command": "steam",
   "menus.dashboard.shortcuts.left.shortcut4.tooltip": "Steam",
-  "menus.dashboard.directories.left.directory1.command": "thunar $HOME/Downloads/",
-  "menus.dashboard.directories.left.directory2.command": "thunar $HOME/Videos/",
+  "menus.dashboard.directories.left.directory1.command": "hyprctl dispatch exec \"kitty -e ranger ~/Downloads\"",
+  "menus.dashboard.directories.left.directory2.command": "hyprctl dispatch exec \"kitty -e ranger ~/Videos\"",
   "menus.dashboard.directories.left.directory3.label": " Git projects",
-  "menus.dashboard.directories.left.directory3.command": "thunar $HOME/github",
-  "menus.dashboard.directories.right.directory1.command": "thunar $HOME/Documents/",
-  "menus.dashboard.directories.right.directory2.command": "thunar $HOME/Pictures/",
-  "menus.dashboard.directories.right.directory3.command": "thunar $HOME/",
+  "menus.dashboard.directories.left.directory3.command": "hyprctl dispatch exec \"kitty -e ranger ~/github\"",
+  "menus.dashboard.directories.right.directory1.command": "hyprctl dispatch exec \"kitty -e ranger ~/Documents\"",
+  "menus.dashboard.directories.right.directory2.command": "hyprctl dispatch exec \"kitty -e ranger ~/Pictures\"",
+  "menus.dashboard.directories.right.directory3.command": "hyprctl dispatch exec \"kitty -e ranger ~/\"",
   "menus.power.lowBatteryNotification": true,
   "bar.customModules.netstat.networkInterface": "cat /proc/net/dev",
   "bar.customModules.netstat.dynamicIcon": true,
@@ -49,7 +49,10 @@ My config.json file right now and how it looks:
       "left": [
         "dashboard",
         "workspaces",
-        "windowtitle"
+        "cpu",
+        "ram",
+        "updates",
+        "hyprsunset"
       ],
       "middle": [
         "media"
@@ -59,7 +62,6 @@ My config.json file right now and how it looks:
         "network",
         "bluetooth",
         "battery",
-        "systray",
         "clock",
         "notifications",
         "power"
@@ -100,8 +102,35 @@ My config.json file right now and how it looks:
   },
   "wallpaper.image": "/home/jhonatan/Pictures/dark_dune.jpeg",
   "wallpaper.enable": true,
-  "bar.clock.format": "%d/%m/%y  %I:%M:%S %p",
-  "theme.bar.transparent": true
+  "bar.clock.format": "%d/%m/%y  %I:%M %p",
+  "theme.bar.transparent": true,
+  "bar.bluetooth.label": true,
+  "bar.customModules.updates.autoHide": false,
+  "bar.workspaces.showAllActive": true,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.windowtitle.truncation_size": 44,
+  "bar.customModules.updates.rightClick": "",
+  "bar.customModules.storage.labelType": "used",
+  "bar.customModules.ram.labelType": "used",
+  "bar.customModules.updates.leftClick": "kitty --hold -e yay -Syu",
+  "menus.transitionTime": 200,
+  "menus.transition": "crossfade",
+  "scalingPriority": "hyprland",
+  "menus.clock.weather.location": "São José dos Campos",
+  "menus.clock.weather.unit": "metric",
+  "theme.bar.menus.menu.volume.scaling": 100,
+  "hyprpanel.restartAgs": false,
+  "bar.launcher.autoDetectIcon": true,
+  "menus.power.showLabel": true,
+  "menus.power.confirmation": false,
+  "theme.bar.floating": false,
+  "bar.autoHide": "never",
+  "theme.bar.outer_spacing": "1em",
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.layer": "top",
+  "theme.bar.buttons.padding_x": "0.7rem",
+  "bar.launcher.rightClick": "alacritty -e fish",
+  "bar.customModules.hyprsunset.temperature": "3000k"
 }
 ```
 
